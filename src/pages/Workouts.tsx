@@ -123,12 +123,12 @@ export function Workouts() {
 
   return (
     <div>
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 mb-6 md:mb-12">
         <div>
-          <span className="text-primary-fixed uppercase tracking-widest text-[10px] font-bold mb-2 block">
+          <span className="text-primary-fixed uppercase tracking-widest text-[10px] font-bold mb-1 block">
             Performance Hub
           </span>
-          <h2 className="text-4xl md:text-5xl font-headline font-extrabold tracking-tighter text-on-surface">
+          <h2 className="text-3xl md:text-5xl font-headline font-extrabold tracking-tighter text-on-surface">
             Treinos
           </h2>
         </div>
@@ -310,13 +310,13 @@ export function Workouts() {
           />
           <div className="relative bg-surface-container-low rounded-2xl p-6 max-w-sm w-full border border-outline-variant/20">
             <h3 className="text-lg font-headline font-bold mb-2">
-              Confirmar exclusao
+              Confirmar exclusão
             </h3>
             <p className="text-sm text-on-surface-variant mb-6">
               Tem certeza que deseja excluir{' '}
               <strong className="text-on-surface">{confirmDelete.name}</strong>?
               {confirmDelete.type === 'workout' &&
-                ' Ciclos que referenciam este treino serao atualizados.'}
+                ' Ciclos que referenciam este treino serão atualizados.'}
             </p>
             <div className="flex gap-3 justify-end">
               <button
@@ -354,7 +354,7 @@ function CycleCard({
   onDelete: () => void
   isActive?: boolean
 }) {
-  const dayLabels = ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab', 'Dom']
+  const dayLabels = ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom']
 
   return (
     <div

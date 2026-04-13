@@ -47,7 +47,7 @@ export function PerformanceChart({ data, unit = 'kg', label }: PerformanceChartP
     return (
       <div className="bg-surface-container-lowest/50 rounded-lg border border-outline-variant/10 h-64 flex items-center justify-center">
         <p className="text-on-surface-variant text-sm">
-          Sem dados para exibir o grafico
+          Sem dados para exibir o gráfico
         </p>
       </div>
     )
@@ -100,7 +100,7 @@ export function PerformanceChart({ data, unit = 'kg', label }: PerformanceChartP
               ? 'bg-primary-container/20 text-primary'
               : 'bg-error/20 text-error'
           }`}>
-            {pctChange >= 0 ? '+' : ''}{pctChange}% este mes
+            {pctChange >= 0 ? '+' : ''}{pctChange}% este mês
           </span>
         </div>
       )}

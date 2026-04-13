@@ -52,7 +52,7 @@ export function useWorkouts() {
     muscle_group: string,
     exercises: ExerciseInput[]
   ) => {
-    if (!user) return { error: 'Nao autenticado' }
+    if (!user) return { error: 'Não autenticado' }
 
     const { data: workout, error: workoutError } = await supabase
       .from('workouts')
@@ -89,7 +89,7 @@ export function useWorkouts() {
     muscle_group: string,
     exercises: ExerciseInput[]
   ) => {
-    if (!user) return { error: 'Nao autenticado' }
+    if (!user) return { error: 'Não autenticado' }
 
     const { error: updateError } = await supabase
       .from('workouts')
@@ -127,7 +127,7 @@ export function useWorkouts() {
   }
 
   const deleteWorkout = async (id: string) => {
-    if (!user) return { error: 'Nao autenticado' }
+    if (!user) return { error: 'Não autenticado' }
 
     await supabase
       .from('cycle_days')

@@ -13,10 +13,10 @@ const MUSCLE_GROUPS = [
   'Costas',
   'Pernas',
   'Ombros',
-  'Bracos',
+  'Braços',
   'Full Body',
   'Core',
-  'Gluteos',
+  'Glúteos',
 ]
 
 interface WorkoutFormModalProps {
@@ -154,7 +154,7 @@ export function WorkoutFormModal({
           <div>
             <div className="flex items-center justify-between mb-4">
               <label className="text-xs font-bold text-on-surface-variant uppercase tracking-wider">
-                Exercicios
+                Exercícios
               </label>
               <button
                 onClick={addExercise}
@@ -181,7 +181,7 @@ export function WorkoutFormModal({
                       onChange={(e) =>
                         updateExercise(i, 'exercise_name', e.target.value)
                       }
-                      placeholder="Nome do exercicio"
+                      placeholder="Nome do exercício"
                       className="flex-1 bg-transparent border-b border-outline-variant focus:border-primary-fixed outline-none py-2 text-sm text-on-surface placeholder:text-on-surface-variant/50 transition-colors"
                     />
                     {exercises.length > 1 && (
@@ -198,7 +198,7 @@ export function WorkoutFormModal({
                   <div className="grid grid-cols-3 gap-3 pl-7">
                     <div>
                       <label className="text-[10px] text-on-surface-variant block mb-1">
-                        Series
+                        Séries
                       </label>
                       <input
                         type="number"

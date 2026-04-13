@@ -35,12 +35,12 @@ export function Dashboard() {
 
   return (
     <div>
-      <header className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <header className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 mb-6 md:mb-12">
         <div>
-          <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface">
-            INICIO
+          <h1 className="font-headline text-3xl md:text-7xl font-extrabold tracking-tighter text-on-surface">
+            INÍCIO
           </h1>
-          <p className="text-on-surface-variant font-medium mt-2 max-w-md">
+          <p className="text-on-surface-variant font-medium mt-1 md:mt-2 max-w-md text-sm md:text-base">
             Monitore seu potencial e execute seus protocolos de performance.
           </p>
         </div>
@@ -49,7 +49,7 @@ export function Dashboard() {
       {daysRemaining !== null && <CycleAlert daysRemaining={daysRemaining} />}
 
       {!activeCycle ? (
-        <div className="bg-surface-container-low rounded-xl p-12 flex flex-col items-center justify-center gap-6 min-h-[400px]">
+        <div className="bg-surface-container-low rounded-xl p-8 md:p-12 flex flex-col items-center justify-center gap-5 min-h-[280px] md:min-h-[400px]">
           <span className="material-symbols-outlined text-on-surface-variant text-5xl opacity-40">
             fitness_center
           </span>
@@ -58,7 +58,7 @@ export function Dashboard() {
               Nenhum ciclo ativo
             </h2>
             <p className="text-on-surface-variant text-sm mb-6">
-              Crie um ciclo de treinamento para comecar a acompanhar seus treinos e evolucao.
+              Crie um ciclo de treinamento para começar a acompanhar seus treinos e evolução.
             </p>
             <button
               onClick={() => navigate('/treinos')}
@@ -81,7 +81,7 @@ export function Dashboard() {
 
           <MetricCard
             icon="local_fire_department"
-            label="Sequencia Ativa"
+            label="Sequência ativa"
             value={`${streak} DIAS`}
             colorClass="bg-error/10 text-error"
           />
@@ -93,7 +93,7 @@ export function Dashboard() {
           />
           <MetricCard
             icon="pulse_alert"
-            label="Treinos Este Mes"
+            label="Treinos este mês"
             value={String(monthlyWorkouts)}
             colorClass="bg-primary-container/10 text-primary-container"
           />

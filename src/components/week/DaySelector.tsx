@@ -1,6 +1,6 @@
 import type { CycleWithDays } from '../../hooks/useCycles'
 
-const DAY_LABELS = ['SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SAB', 'DOM'] as const
+const DAY_LABELS = ['SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SÁB', 'DOM'] as const
 
 interface DaySelectorProps {
   activeCycle: CycleWithDays

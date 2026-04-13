@@ -218,10 +218,10 @@ export function ProfileEditModal({
               <option value="">Selecione...</option>
               <option value="Hipertrofia">Hipertrofia</option>
               <option value="Emagrecimento">Emagrecimento</option>
-              <option value="Resistencia">Resistencia</option>
-              <option value="Forca">Forca</option>
-              <option value="Saude">Saude</option>
-              <option value="Recomposicao">Recomposicao</option>
+              <option value="Resistência">Resistência</option>
+              <option value="Força">Força</option>
+              <option value="Saúde">Saúde</option>
+              <option value="Recomposição">Recomposição</option>
             </select>
           </div>
         </div>

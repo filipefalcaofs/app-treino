@@ -24,7 +24,7 @@ export function HeroWorkoutCard({ workoutName, cycleName, isRest, isRunning }: H
             Dia de Descanso
           </h2>
           <p className="text-on-surface-variant text-sm max-w-sm">
-            Recuperacao ativa. Seu corpo agradece o tempo de regeneracao.
+            Recuperação ativa. Seu corpo agradece o tempo de regeneração.
           </p>
         </div>
         {cycleName && (
@@ -54,7 +54,7 @@ export function HeroWorkoutCard({ workoutName, cycleName, isRest, isRunning }: H
         </h2>
         {cycleName && (
           <p className="text-on-surface-variant text-sm font-medium">
-            {cycleName} {isRunning ? '/ Corrida' : '/ Musculacao'}
+            {cycleName} {isRunning ? '/ Corrida' : '/ Musculação'}
           </p>
         )}
       </div>
@@ -71,7 +71,7 @@ export function HeroWorkoutCard({ workoutName, cycleName, isRest, isRunning }: H
           onClick={() => navigate('/semana')}
           className="flex items-center justify-center gap-2 bg-surface-container-highest/80 backdrop-blur-md border border-outline-variant/20 text-on-surface font-bold px-6 py-4 rounded-xl text-sm hover:bg-surface-container-highest transition-colors cursor-pointer"
         >
-          Ver Exercicios
+          Ver exercícios
           <span className="material-symbols-outlined text-lg">arrow_forward</span>
         </button>
       </div>

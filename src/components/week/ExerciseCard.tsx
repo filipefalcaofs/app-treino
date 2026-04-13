@@ -114,7 +114,7 @@ export function ExerciseCard({
           <div>
             <h4 className="font-headline font-bold text-xl">{exerciseName}</h4>
             <p className="text-on-surface-variant font-medium text-sm">
-              {setsCount} Series x {repsLabel} Reps
+              {setsCount} Séries x {repsLabel} Reps
               {filledCount > 0 && (
                 <span className="text-primary ml-2">
                   ({filledCount}/{setsCount} feitas)
@@ -151,7 +151,7 @@ export function ExerciseCard({
               `}
             >
               <span className="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">
-                Serie {setNumber}
+                Série {setNumber}
               </span>
               {isFuture && !isFilled ? (
                 <span className="text-xs italic text-on-surface-variant">
@@ -194,12 +194,12 @@ export function ExerciseCard({
           <span className="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">
             expand_more
           </span>
-          Notas do Exercicio
+          Notas do exercício
         </summary>
         <div className="mt-4">
           <textarea
             className="w-full bg-surface-container-lowest border-none rounded-xl p-4 text-sm text-on-surface-variant italic focus:ring-1 focus:ring-primary h-24 resize-none"
-            placeholder="Adicione observacoes sobre o exercicio..."
+            placeholder="Adicione observações sobre o exercício..."
             value={note || firstSetWithNote?.note || ''}
             onChange={(e) => handleNoteChange(e.target.value)}
           />

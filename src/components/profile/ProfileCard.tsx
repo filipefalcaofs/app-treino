@@ -14,7 +14,7 @@ function formatDate(dateStr: string): string {
 }
 
 export function ProfileCard({ profile }: ProfileCardProps) {
-  const name = profile?.name?.toUpperCase() ?? 'USUARIO'
+  const name = profile?.name?.toUpperCase() ?? 'USUÁRIO'
   const goal = profile?.goal ?? '--'
   const since = profile?.created_at ? formatDate(profile.created_at) : '--'
 

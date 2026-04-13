@@ -48,7 +48,7 @@ export function CycleBanner({ cycle, currentWeek }: CycleBannerProps) {
               <div className="h-10 w-px bg-outline-variant/20" />
               <div>
                 <p className="text-xs text-on-surface-variant font-medium mb-1">
-                  Consistencia
+                  Consistência
                 </p>
                 <p className="text-xl font-black text-on-surface">--</p>
               </div>

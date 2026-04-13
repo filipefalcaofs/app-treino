@@ -58,7 +58,7 @@ export function useCycles() {
     days: DayInput[],
     activateNow: boolean
   ) => {
-    if (!user) return { error: 'Nao autenticado' }
+    if (!user) return { error: 'Não autenticado' }
 
     if (activateNow) {
       await supabase
@@ -102,7 +102,7 @@ export function useCycles() {
   }
 
   const activateCycle = async (id: string) => {
-    if (!user) return { error: 'Nao autenticado' }
+    if (!user) return { error: 'Não autenticado' }
 
     await supabase
       .from('cycles')

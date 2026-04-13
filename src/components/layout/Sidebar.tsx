@@ -3,10 +3,10 @@ import { useAuth } from '../../hooks/useAuth'
 import { OnlineIndicator } from './OnlineIndicator'
 
 const navItems = [
-  { to: '/', label: 'Inicio', icon: 'grid_view' },
+  { to: '/', label: 'Início', icon: 'grid_view' },
   { to: '/semana', label: 'Semana', icon: 'calendar_view_week' },
   { to: '/treinos', label: 'Treinos', icon: 'fitness_center' },
-  { to: '/evolucao', label: 'Evolucao', icon: 'trending_up' },
+  { to: '/evolucao', label: 'Evolução', icon: 'trending_up' },
   { to: '/perfil', label: 'Perfil', icon: 'person' },
 ]
 
@@ -57,7 +57,7 @@ export function Sidebar() {
           </div>
           <div className="flex-1 overflow-hidden">
             <p className="font-headline font-bold text-sm truncate text-on-surface">
-              {user?.email?.split('@')[0] ?? 'Usuario'}
+              {user?.email?.split('@')[0] ?? 'Usuário'}
             </p>
             <p className="text-[10px] text-on-surface-variant uppercase tracking-widest">
               Atleta

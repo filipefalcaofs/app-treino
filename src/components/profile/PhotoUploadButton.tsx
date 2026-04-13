@@ -76,7 +76,7 @@ export function PhotoUploadButton({ onUpload }: PhotoUploadButtonProps) {
 
           <div className="relative bg-surface-container-high rounded-2xl w-full max-w-sm p-6">
             <h3 className="text-lg font-black font-headline text-on-surface mb-4">
-              Nova foto de evolucao
+              Nova foto de evolução
             </h3>
 
             {preview && (

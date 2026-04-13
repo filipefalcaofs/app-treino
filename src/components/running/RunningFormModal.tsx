@@ -70,7 +70,7 @@ export function RunningFormModal({ open, onClose, onSave }: RunningFormModalProp
     }
     const n = parseFloat(raw)
     if (isNaN(n) || n < 0) {
-      setErrors(prev => ({ ...prev, [key]: 'Valor invalido' }))
+      setErrors(prev => ({ ...prev, [key]: 'Valor inválido' }))
       return
     }
     updateField(key, n as RunningFormData[typeof key])
@@ -78,7 +78,7 @@ export function RunningFormModal({ open, onClose, onSave }: RunningFormModalProp
 
   function validate(): boolean {
     const e: Record<string, string> = {}
-    if (!form.date) e.date = 'Obrigatorio'
+    if (!form.date) e.date = 'Obrigatório'
     if (form.total_time && !/^\d{1,2}:\d{2}:\d{2}$/.test(form.total_time)) {
       e.total_time = 'Formato HH:MM:SS'
     }
@@ -139,7 +139,7 @@ export function RunningFormModal({ open, onClose, onSave }: RunningFormModalProp
               {errors.date && <p className="text-error text-xs mt-1">{errors.date}</p>}
             </div>
             <div>
-              <label className={labelCls}>Descricao</label>
+              <label className={labelCls}>Descrição</label>
               <input
                 type="text"
                 value={form.description ?? ''}
@@ -152,7 +152,7 @@ export function RunningFormModal({ open, onClose, onSave }: RunningFormModalProp
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label className={labelCls}>Distancia (km)</label>
+              <label className={labelCls}>Distância (km)</label>
               <input
                 type="number"
                 step="0.01"
@@ -179,7 +179,7 @@ export function RunningFormModal({ open, onClose, onSave }: RunningFormModalProp
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label className={labelCls}>Pace Medio (MM:SS)</label>
+              <label className={labelCls}>Pace médio (MM:SS)</label>
               <input
                 type="text"
                 value={form.avg_pace ?? ''}
@@ -190,7 +190,7 @@ export function RunningFormModal({ open, onClose, onSave }: RunningFormModalProp
               {errors.avg_pace && <p className="text-error text-xs mt-1">{errors.avg_pace}</p>}
             </div>
             <div>
-              <label className={labelCls}>Tempo de Movimentacao (HH:MM:SS)</label>
+              <label className={labelCls}>Tempo de movimentação (HH:MM:SS)</label>
               <input
                 type="text"
                 value={form.moving_time ?? ''}
@@ -204,7 +204,7 @@ export function RunningFormModal({ open, onClose, onSave }: RunningFormModalProp
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label className={labelCls}>Elevacao (m)</label>
+              <label className={labelCls}>Elevação (m)</label>
               <input
                 type="number"
                 min="0"
@@ -216,7 +216,7 @@ export function RunningFormModal({ open, onClose, onSave }: RunningFormModalProp
               {errors.elevation_m && <p className="text-error text-xs mt-1">{errors.elevation_m}</p>}
             </div>
             <div>
-              <label className={labelCls}>Ganho de Elevacao (m)</label>
+              <label className={labelCls}>Ganho de elevação (m)</label>
               <input
                 type="number"
                 min="0"
@@ -242,7 +242,7 @@ export function RunningFormModal({ open, onClose, onSave }: RunningFormModalProp
               />
             </div>
             <div>
-              <label className={labelCls}>Frequencia Cardiaca (bpm)</label>
+              <label className={labelCls}>Frequência cardíaca (bpm)</label>
               <input
                 type="number"
                 min="0"
@@ -256,7 +256,7 @@ export function RunningFormModal({ open, onClose, onSave }: RunningFormModalProp
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label className={labelCls}>Superficie</label>
+              <label className={labelCls}>Superfície</label>
               <select
                 value={form.surface ?? ''}
                 onChange={e => updateField('surface', e.target.value || null)}
@@ -284,11 +284,11 @@ export function RunningFormModal({ open, onClose, onSave }: RunningFormModalProp
           </div>
 
           <div>
-            <label className={labelCls}>Anotacao</label>
+            <label className={labelCls}>Anotação</label>
             <textarea
               value={form.note ?? ''}
               onChange={e => updateField('note', e.target.value)}
-              placeholder="Observacoes sobre a corrida..."
+              placeholder="Observações sobre a corrida..."
               rows={3}
               className={`${inputCls} resize-none`}
             />

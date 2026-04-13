@@ -3,11 +3,11 @@ import type { WorkoutWithExercises } from '../../hooks/useWorkouts'
 
 const DAY_LABELS = [
   'Segunda',
-  'Terca',
+  'Terça',
   'Quarta',
   'Quinta',
   'Sexta',
-  'Sabado',
+  'Sábado',
   'Domingo',
 ]
 
@@ -147,7 +147,7 @@ export function CycleFormModal({
             </div>
             <div>
               <label className="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2 block">
-                Duracao (semanas)
+                Duração (semanas)
               </label>
               <input
                 type="number"
@@ -164,7 +164,7 @@ export function CycleFormModal({
 
           <div>
             <label className="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-4 block">
-              Configuracao dos Dias
+              Configuração dos dias
             </label>
             <div className="space-y-3">
               {DAY_LABELS.map((label, i) => (

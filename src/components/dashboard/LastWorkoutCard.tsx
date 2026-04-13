@@ -47,7 +47,7 @@ export function LastWorkoutCard({ session }: LastWorkoutCardProps) {
     <div className="md:col-span-4 bg-surface-container-low rounded-xl p-6 border border-outline-variant/5 flex flex-col">
       <div className="flex items-center justify-between mb-6">
         <h3 className="font-headline font-bold text-on-surface-variant tracking-widest text-xs uppercase">
-          Ultimo Treino
+          Último treino
         </h3>
         {session && (
           <span className="text-primary-dim font-mono text-xs">{formatSessionDate(session.date)}</span>
@@ -82,7 +82,7 @@ export function LastWorkoutCard({ session }: LastWorkoutCardProps) {
             onClick={() => navigate('/evolucao')}
             className="mt-5 flex items-center gap-1.5 text-primary-dim font-bold text-sm uppercase tracking-wider hover:opacity-80 transition-opacity cursor-pointer"
           >
-            Ver Historico Completo
+            Ver histórico completo
             <span className="material-symbols-outlined text-base">arrow_forward</span>
           </button>
         </>

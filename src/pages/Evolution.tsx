@@ -142,14 +142,14 @@ export function Evolution() {
 
   return (
     <div>
-      <header className="mb-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <header className="mb-6 md:mb-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6">
           <div>
-            <h1 className="font-headline font-extrabold text-5xl tracking-tighter text-on-surface mb-2">
-              EVOLUCAO
+            <h1 className="font-headline font-extrabold text-3xl md:text-5xl tracking-tighter text-on-surface mb-1">
+              EVOLUÇÃO
             </h1>
-            <p className="text-on-surface-variant font-medium">
-              Acompanhe suas metricas de desempenho e trajetoria fisica.
+            <p className="text-on-surface-variant font-medium text-sm md:text-base">
+              Acompanhe suas métricas de desempenho e trajetória física.
             </p>
           </div>
           <div className="flex bg-surface-container-low p-1 rounded-xl">
@@ -161,7 +161,7 @@ export function Evolution() {
                   : 'text-on-surface-variant hover:text-on-surface'
               }`}
             >
-              Musculacao
+              Musculação
             </button>
             <button
               onClick={() => setTab('corrida')}
@@ -199,12 +199,12 @@ export function Evolution() {
                 <PerformanceChart
                   data={chartData}
                   unit="kg"
-                  label={`Evolucao de carga - ${selectedExercise}`}
+                  label={`Evolução de carga - ${selectedExercise}`}
                 />
 
                 <div>
                   <h4 className="text-sm font-bold text-on-surface-variant uppercase tracking-wider mb-4">
-                    Historico de Sessoes
+                    Histórico de sessões
                   </h4>
                   <SessionHistory sessions={sessionEntries} />
                 </div>
@@ -217,10 +217,10 @@ export function Evolution() {
                   fitness_center
                 </span>
                 <p className="text-on-surface-variant text-lg font-medium mb-2">
-                  Nenhum exercicio registrado
+                  Nenhum exercício registrado
                 </p>
                 <p className="text-on-surface-variant/60 text-sm">
-                  Registre treinos na pagina Semana para ver seus graficos de evolucao.
+                  Registre treinos na página Semana para ver seus gráficos de evolução.
                 </p>
               </div>
             )}
@@ -245,25 +245,25 @@ export function Evolution() {
 
             <div className="bg-surface-container-low rounded-xl p-6 space-y-4">
               <h4 className="text-[10px] font-bold text-on-surface-variant uppercase tracking-[0.2em]">
-                Metricas
+                Métricas
               </h4>
 
               <div className="flex items-center justify-between">
-                <span className="text-sm text-on-surface-variant">Volume medio</span>
+                <span className="text-sm text-on-surface-variant">Volume médio</span>
                 <span className="font-bold text-on-surface font-headline">
                   {volumeAvg != null ? `${volumeAvg.toLocaleString('pt-BR')} kg` : '--'}
                 </span>
               </div>
 
               <div className="flex items-center justify-between">
-                <span className="text-sm text-on-surface-variant">Sessoes registradas</span>
+                <span className="text-sm text-on-surface-variant">Sessões registradas</span>
                 <span className="font-bold text-on-surface font-headline">
                   {sessionEntries.length}
                 </span>
               </div>
 
               <div className="flex items-center justify-between">
-                <span className="text-sm text-on-surface-variant">Exercicios unicos</span>
+                <span className="text-sm text-on-surface-variant">Exercícios únicos</span>
                 <span className="font-bold text-on-surface font-headline">
                   {exercises.length}
                 </span>
@@ -289,7 +289,7 @@ export function Evolution() {
             {runPRs.maxDistance && (
               <PRCard
                 value={`${runPRs.maxDistance.value} KM`}
-                label="Maior Distancia"
+                label="Maior distância"
                 sublabel={new Date(runPRs.maxDistance.date + 'T00:00:00').toLocaleDateString('pt-BR')}
               />
             )}
@@ -306,7 +306,7 @@ export function Evolution() {
             <PerformanceChart
               data={runDistanceChartData}
               unit="km"
-              label="Evolucao de Distancia"
+              label="Evolução de distância"
             />
           )}
 
@@ -314,13 +314,13 @@ export function Evolution() {
             <PerformanceChart
               data={runPaceChartData}
               unit="min/km"
-              label="Evolucao de Pace"
+              label="Evolução de pace"
             />
           )}
 
           <div>
             <h4 className="text-sm font-bold text-on-surface-variant uppercase tracking-wider mb-4">
-              Historico de Corridas
+              Histórico de corridas
             </h4>
             <RunningHistory
               logs={logs}

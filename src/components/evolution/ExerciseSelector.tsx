@@ -27,7 +27,7 @@ export function ExerciseSelector({ exercises, selected, onSelect }: ExerciseSele
           fitness_center
         </span>
         <h3 className="font-headline font-bold text-2xl text-on-surface flex-1">
-          {selected || 'Selecionar exercicio'}
+          {selected || 'Selecionar exercício'}
         </h3>
         <button
           onClick={() => setOpen(!open)}
@@ -41,7 +41,7 @@ export function ExerciseSelector({ exercises, selected, onSelect }: ExerciseSele
         <div className="absolute top-full left-0 right-0 mt-2 bg-surface-container-highest rounded-xl shadow-2xl z-30 max-h-72 overflow-y-auto border border-outline-variant/20">
           {exercises.length === 0 ? (
             <p className="p-4 text-sm text-on-surface-variant text-center">
-              Nenhum exercicio registrado
+              Nenhum exercício registrado
             </p>
           ) : (
             exercises.map(name => (

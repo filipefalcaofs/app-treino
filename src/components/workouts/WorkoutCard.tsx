@@ -82,7 +82,7 @@ export function WorkoutCard({ workout, onEdit, onDelete }: WorkoutCardProps) {
       <h4 className="text-xl font-bold font-headline mb-1">{workout.name}</h4>
       <p className="text-sm text-on-surface-variant mb-6">
         {workout.muscle_group} &bull; {exerciseCount}{' '}
-        {exerciseCount === 1 ? 'Exercicio' : 'Exercicios'}
+        {exerciseCount === 1 ? 'Exercício' : 'Exercícios'}
       </p>
 
       <div className="mt-auto flex items-center justify-between">

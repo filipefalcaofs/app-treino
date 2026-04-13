@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth } from './hooks/useAuth'
 import { AppShell } from './components/layout/AppShell'
+import { InstallPrompt } from './components/InstallPrompt'
 import { Login } from './pages/Login'
 import { Dashboard } from './pages/Dashboard'
 import { Week } from './pages/Week'
@@ -26,6 +27,7 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <BrowserRouter>
+      <InstallPrompt />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route

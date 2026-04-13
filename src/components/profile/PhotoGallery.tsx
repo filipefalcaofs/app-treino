@@ -26,7 +26,7 @@ export function PhotoGallery({ photos, onDelete }: PhotoGalleryProps) {
           photo_library
         </span>
         <p className="text-on-surface-variant">
-          Nenhuma foto de evolucao ainda. Adicione sua primeira foto.
+          Nenhuma foto de evolução ainda. Adicione sua primeira foto.
         </p>
       </div>
     )
@@ -50,7 +50,7 @@ export function PhotoGallery({ photos, onDelete }: PhotoGalleryProps) {
         >
           <img
             src={photo.photo_url}
-            alt={`Foto de evolucao ${formatPhotoDate(photo.taken_at)}`}
+            alt={`Foto de evolução ${formatPhotoDate(photo.taken_at)}`}
             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
           />
 

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useProfile } from '../hooks/useProfile'
 import { useProgressPhotos } from '../hooks/useProgressPhotos'
+import { useAuth } from '../hooks/useAuth'
 import { ProfileCard } from '../components/profile/ProfileCard'
 import { MetricTile } from '../components/profile/MetricTile'
 import { ProfileEditModal } from '../components/profile/ProfileEditModal'
@@ -10,6 +11,7 @@ import { PhotoUploadButton } from '../components/profile/PhotoUploadButton'
 export function Profile() {
   const { profile, loading, updateProfile, uploadAvatar } = useProfile()
   const { photos, loading: photosLoading, addPhoto, deletePhoto } = useProgressPhotos()
+  const { signOut } = useAuth()
   const [editOpen, setEditOpen] = useState(false)
 
   if (loading) {
@@ -22,13 +24,13 @@ export function Profile() {
 
   return (
     <div>
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 mb-6 md:mb-12">
         <div>
-          <h1 className="text-4xl md:text-6xl font-black italic tracking-tighter text-on-surface mb-2 font-headline">
+          <h1 className="text-3xl md:text-6xl font-black italic tracking-tighter text-on-surface mb-1 font-headline">
             PERFIL DO ATLETA
           </h1>
-          <p className="text-on-surface-variant font-medium">
-            Monitorando precisao metabolica e evolucao fisica.
+          <p className="text-on-surface-variant font-medium text-sm md:text-base">
+            Monitorando precisão metabólica e evolução física.
           </p>
         </div>
         <button
@@ -40,7 +42,7 @@ export function Profile() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 mb-8 md:mb-12">
         <ProfileCard profile={profile} />
 
         <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -66,10 +68,10 @@ export function Profile() {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-6 mb-6">
         <div className="flex items-center gap-4">
           <h3 className="text-2xl font-black italic text-on-surface uppercase tracking-tight font-headline">
-            Galeria de Evolucao
+            Galeria de Evolução
           </h3>
           <span className="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant rounded text-xs font-bold">
             {photos.length} {photos.length === 1 ? 'FOTO' : 'FOTOS'}
@@ -93,6 +95,16 @@ export function Profile() {
         onSave={updateProfile}
         onUploadAvatar={uploadAvatar}
       />
+
+      <div className="mt-12 pt-6 border-t border-outline-variant/15">
+        <button
+          onClick={signOut}
+          className="flex items-center justify-center gap-3 w-full py-4 text-error hover:bg-error/10 transition-colors rounded-xl font-headline font-bold tracking-tight"
+        >
+          <span className="material-symbols-outlined">logout</span>
+          ENCERRAR SESSAO
+        </button>
+      </div>
     </div>
   )
 }

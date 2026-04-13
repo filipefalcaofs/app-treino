@@ -25,7 +25,7 @@ export function SessionHistory({ sessions }: SessionHistoryProps) {
           history
         </span>
         <p className="text-on-surface-variant text-sm">
-          Nenhum historico encontrado para este exercicio
+          Nenhum histórico encontrado para este exercício
         </p>
       </div>
     )

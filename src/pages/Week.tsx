@@ -143,14 +143,14 @@ export function Week() {
   if (!activeCycle) {
     return (
       <div>
-        <section className="mb-10">
-          <h2 className="font-headline font-extrabold text-4xl tracking-tighter mb-2">
-            SEMANA
-          </h2>
-          <p className="text-on-surface-variant font-medium">
-            Selecione um dia para registrar seu treino.
-          </p>
-        </section>
+      <section className="mb-6 md:mb-10">
+        <h2 className="font-headline font-extrabold text-3xl md:text-4xl tracking-tighter mb-1">
+          SEMANA
+        </h2>
+        <p className="text-on-surface-variant font-medium text-sm md:text-base">
+          Selecione um dia para registrar seu treino.
+        </p>
+      </section>
 
         <div className="flex flex-col items-center justify-center py-16 gap-6">
           <div className="w-20 h-20 rounded-2xl bg-surface-container-high flex items-center justify-center">
@@ -163,7 +163,7 @@ export function Week() {
               Nenhum ciclo ativo
             </p>
             <p className="text-on-surface-variant text-sm max-w-sm">
-              Crie um ciclo de treino para ver a programacao semanal e registrar
+              Crie um ciclo de treino para ver a programação semanal e registrar
               seus treinos.
             </p>
           </div>
@@ -182,13 +182,13 @@ export function Week() {
 
   return (
     <div>
-      <section className="mb-10">
-        <h2 className="font-headline font-extrabold text-4xl tracking-tighter mb-2">
+      <section className="mb-6 md:mb-10">
+        <h2 className="font-headline font-extrabold text-3xl md:text-4xl tracking-tighter mb-1">
           SEMANA
         </h2>
-        <p className="text-on-surface-variant font-medium">
-          Fase de Treino: {activeCycle.name}
-          <span className="ml-3 text-xs text-on-surface-variant/60">
+        <p className="text-on-surface-variant font-medium text-sm md:text-base">
+          {activeCycle.name}
+          <span className="ml-2 text-xs text-on-surface-variant/60">
             Semana {currentWeek} de {activeCycle.duration_weeks}
           </span>
         </p>
@@ -211,7 +211,7 @@ export function Week() {
             Dia de descanso
           </p>
           <p className="text-on-surface-variant text-sm">
-            Aproveite para recuperar e se preparar para o proximo treino.
+            Aproveite para recuperar e se preparar para o próximo treino.
           </p>
         </div>
       ) : isRunningOnly ? (
@@ -225,7 +225,7 @@ export function Week() {
             Dia de corrida
           </p>
           <p className="text-on-surface-variant text-sm">
-            Registre sua corrida na aba de evolucao.
+            Registre sua corrida na aba de evolução.
           </p>
           <Link
             to="/evolucao"
@@ -295,14 +295,14 @@ export function Week() {
                     TREINO COMPLETO
                   </p>
                   <p className="text-on-primary-container/80 text-sm font-medium mb-6">
-                    Todos os exercicios foram preenchidos. Finalize a sessao
+                    Todos os exercícios foram preenchidos. Finalize a sessão
                     para registrar.
                   </p>
                   <button
                     onClick={handleCompleteSession}
                     className="px-8 py-3 bg-on-primary-container text-primary-container rounded-full font-bold text-sm hover:scale-105 transition-transform active:scale-95"
                   >
-                    Finalizar Sessao
+                    Finalizar sessão
                   </button>
                 </div>
               )}
@@ -313,7 +313,7 @@ export function Week() {
                     check_circle
                   </span>
                   <p className="text-on-surface font-headline font-bold text-lg">
-                    Sessao finalizada
+                    Sessão finalizada
                   </p>
                   <p className="text-on-surface-variant text-sm mt-1">
                     Treino registrado com sucesso.
